@@ -1,0 +1,24 @@
+@use "../libs/index.scss" as *;
+
+
+body{
+  display: flex;
+  flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border: 0;
+  background-color: var(--main-bg);
+  color:var(--text-primary);
+
+}
+
+a{
+  text-decoration: none;
+}
+
+p{font-size: 1.0rem;}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}

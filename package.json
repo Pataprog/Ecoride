@@ -1,0 +1,46 @@
+{
+  "name": "ecoride",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/back/scripts/server.js",
+  "scripts": {
+    "build": "tsc -p config/tsconfig.json",
+    "stop-db": "tsx devtool/stop-docker.cjs",
+    "start-db": "tsx devtool/wait-and-start.cjs",
+    "start-watcher": "tsx devtool/file_watcher.ts",
+    "browser-sync": "tsx devtool/utils/browserSync.ts",
+    "server": "nodemon --watch build/back --ext js --exec node build/back/scripts/server.js",
+    "boot": " npm run start-db ",
+    "start": "tsx devtool/file_watcher.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@types/browser-sync": "^2.29.0",
+    "@types/express": "^5.0.1",
+    "@types/express-session": "^1.18.1",
+    "@types/glob": "^8.1.0",
+    "@types/sequelize": "^4.28.20",
+    "browser-sync": "^3.0.4",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10",
+    "sass": "^1.88.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "wait-port": "^1.1.0"
+  }
+}

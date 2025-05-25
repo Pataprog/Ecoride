@@ -1,0 +1,28 @@
+@use '../charte/charte' as *;
+
+
+%button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-weight: 600;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+%button_circle{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border-color: var(--text-primary);
+    background-color: transparent;
+    width: fit-content;
+
+}
+
+%input{
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border-color: var(--border-color);
+    
+}

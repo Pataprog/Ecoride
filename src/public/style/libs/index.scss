@@ -1,0 +1,10 @@
+@forward 'components';
+@forward '../charte/charte';
+@use "sass:color";
+
+
+
+@function darken-color($color, $percentage) {
+  @return color.scale($color, $lightness: -$percentage);
+}
+

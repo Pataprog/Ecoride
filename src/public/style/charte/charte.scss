@@ -1,0 +1,78 @@
+
+
+// Définir les couleurs de base
+$color-primary:  #4cfd78;     // Vert éco
+$color-secondary: #8B8C3A;     // Orange solaire
+$color-dark-primary: #001800;         // Fond sombre
+$color-light-primary: #3eff5841;        // Fond clair
+$color-dark-text: #96d388;       // Texte clair sur sombre
+$color-light-text: #4C6C40;    // Texte sombre sur clair
+$color-dark-text-secondary: #94A3B8; // Texte secondaire sombre
+$color-light-text-secondary: #6B7280; // Texte secondaire clair
+$color-dark-border: #334155;     // Bordures sombres
+$color-light-border: #E5E7EB;    // Bordures claires
+$color-green-light: #6EE7B7;     // Vert clair pour accents
+
+$color-main-bg-dark:#001800;
+$color-sub-bg-dark:#001400;
+$color-main-bg-light:rgb(197, 248, 182);
+$color-sub-bg-light:rgba(248, 255, 246, 0.904);
+$color-main-text-dark:#0e4d0e;
+$color-sub-text-dark:rgb(49, 223, 107);
+$color-main-text-light: rgb(173, 252, 148);
+$color-sub-text-light:rgb(49, 223, 107);
+$color-border-dark:#001800;
+$color-border-light:rgb(173, 252, 148);
+
+
+
+
+
+
+// Mixin pour les thèmes
+@mixin theme-dark {
+    --main-bg: #{$color-main-bg-dark};
+    --sub-bg : #{$color-sub-bg-dark};
+    --text-primary: #{$color-main-text-light};
+    --text-secondary: #{$color-sub-text-light};
+    --primary-color: #{$color-primary};
+    --secondary-color: #{$color-secondary};
+    --border-color: #{$color-border-light};
+}
+
+@mixin theme-light {
+    --main-bg: #{$color-main-bg-light};
+    --sub-bg : #{$color-sub-bg-light};
+    --text-primary: #{$color-main-text-dark};
+    --text-secondary: #{$color-sub-text-dark};
+    --primary-color: #{$color-primary};
+    --secondary-color: #{$color-secondary};
+    --border-color: #{$color-border-dark};
+}
+
+
+// Thème sombre par défaut
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include theme-dark;
+  }
+}
+
+// Thème clair par défaut
+@media (prefers-color-scheme: light) {
+  :root {
+    @include theme-light;
+  }
+}
+// Appliquer les thèmes en fonction du mode
+
+body {
+  font-family: 
+    -apple-system, BlinkMacSystemFont, "Segoe UI",
+     Roboto, Oxygen, Ubuntu, Cantarell,
+      "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+

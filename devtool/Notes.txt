@@ -1,0 +1,10 @@
+import { logger } from './utils/logger.js';
+
+logger.info('Watcher lancé.');
+logger.success('Transpilation réussie.');
+logger.warn('Le fichier .map est manquant.');
+logger.error('Impossible de lire le fichier TS.');
+logger.debug('Événement fichier détecté : src/components/Button.ts');
+logger.custom('Hello world stylé', chalk.bgMagenta.bold.white);
+
+tsx DevTool/file_watcher.ts

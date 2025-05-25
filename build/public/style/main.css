@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/*!
+ * Fichier généré automatiquement — ne pas modifier directement.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: #001800;
+    --sub-bg: #001400;
+    --text-primary: rgb(173, 252, 148);
+    --text-secondary: rgb(49, 223, 107);
+    --primary-color: #4cfd78;
+    --secondary-color: #8B8C3A;
+    --border-color: rgb(173, 252, 148);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg: rgb(197, 248, 182);
+    --sub-bg: rgba(248, 255, 246, 0.904);
+    --text-primary: #0e4d0e;
+    --text-secondary: rgb(49, 223, 107);
+    --primary-color: #4cfd78;
+    --secondary-color: #8B8C3A;
+    --border-color: #001800;
+  }
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.homepage main form button, header button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  font-weight: 600;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+#btn_close, footer .btn_help {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border-color: var(--text-primary);
+  background-color: transparent;
+  width: fit-content;
+}
+
+.homepage main form input {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border-color: var(--border-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  background-color: var(--main-bg);
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+header {
+  display: flex;
+  height: 12dvh;
+  width: 100%;
+  background-color: var(--sub-bg);
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-primary);
+}
+header .logo {
+  margin-left: 2%;
+  height: 10dvh;
+  aspect-ratio: 1/1;
+}
+header h1 {
+  flex-grow: 1;
+}
+header #btn_menu {
+  margin-right: 5%;
+}
+
+#cont_overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-bg);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+#nav_mobile {
+  width: 100%;
+  padding: 5dvh 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+#nav_mobile div {
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+  display: flex;
+  gap: 20%;
+  margin-bottom: 2rem;
+}
+#nav_mobile button {
+  width: 100%;
+}
+
+#btn_close {
+  max-width: 2rem;
+  aspect-ratio: 1/1;
+  margin-bottom: 3rem;
+  align-self: flex-end;
+  color: var(--text-primary) !important;
+  text-align: center;
+  padding: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5dvh;
+  width: 100%;
+  background-color: var(--sub-bg);
+  border-top: 1px solid var(--text-primary);
+}
+footer a {
+  color: var(--text-primary);
+}
+footer .btn_help {
+  width: 2rem;
+  height: 2rem;
+  transform: translateY(-60%);
+  background-color: var(--sub-bg);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.homepage {
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+.homepage main {
+  display: flex;
+  flex-direction: column;
+  max-height: 83dvh;
+}
+.homepage main h3 {
+  text-align: center;
+}
+.homepage main p {
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+}
+.homepage main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.homepage main form .formAdress {
+  display: flex;
+  justify-content: center;
+}
+.homepage main form input {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.homepage main form #cont_address {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(183, 228, 182, 0.425);
+  border-radius: 2rem;
+}
+.homepage main form li {
+  margin: 0.5rem;
+}
+.homepage main button {
+  display: inline-block;
+  font-size: 2rem;
+  height: 2.75rem;
+  text-align: center;
+  line-height: 1.375rem;
+  padding: 0;
+}
+.homepage .container {
+  flex-grow: 1;
+  width: 100%;
+}
+.homepage figure {
+  height: 20%;
+  width: 80%;
+  margin: 0 0 0 auto;
+  overflow: hidden;
+}
+.homepage .illu_homepage {
+  height: 100%;
+  transform: translate(20%);
+}
+.homepage span {
+  color: var(--text-secondary);
+}
+
+.legal {
+  margin-left: 1rem;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%-include('partials/head')%>
+
+    <body class="homepage">
+        <%-include('partials/header')%>
+        <main class="main">
+            <div class="container">
+                <h3>
+                    <span>Éco</span>voyagez, <span>Éco</span>-voiturez, <span>Éco</span>ridez
+                </h3>
+                <p> EcoRide est une plateforme de covoiturage conçue pour des trajets
+                    plus économiques et respectueux de l’environnement. <br>
+                    Trouvez un conducteur ou des passagers en quelques clics, optimisez
+                    vos trajets et réduisez votre empreinte carbone. <br>
+                    Ensemble, faisons de chaque voyage une aventure plus responsable !
+                </p>
+                <form action="" method="get">
+                    <div class="formAdress">
+                        <input id=field_dest type="text" placeholder="Où allons nous ? "aria-label="adresse de destination"> 
+                        <button type= "button" >➤</button>
+                    </div>
+                    <div id="cont_address">
+                        <ul id="adressList"></ul>
+                    </div>
+                </form>
+            </div>
+            <figure>     
+              <img class="illu_homepage" src="/images/illu_homepage.svg" alt="">  
+            </figure>
+        </main>
+        <%-include('partials/footer')%>
+        <script src="/script/utils/adresse_autocomplete.js"></script>
+    </body>
+</html>
