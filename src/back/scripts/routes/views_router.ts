@@ -21,6 +21,10 @@ router.get('/menu',(req,res) =>{
 
   });
 
+  router.get('/covoiturage',(req,res) =>{
+  res.render('searchTrip');
+
+  });
 
 
 

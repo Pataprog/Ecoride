@@ -16,4 +16,7 @@ router.get('/legal', (req, res) => {
 router.get('/menu', (req, res) => {
     res.render('menu');
 });
+router.get('/covoiturage', (req, res) => {
+    res.render('searchTrip');
+});
 export default router;

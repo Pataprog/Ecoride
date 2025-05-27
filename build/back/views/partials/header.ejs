@@ -5,5 +5,8 @@
         <button id="btn_menu">MENU</button>
     </div>
     <div id="cont_overlay"></div>
-    <script src="/script/navigation/menu_setting.js" defer></script>
+    <script type="module" defer>
+        import {MenuManager} from './script/navigation/menuManager.js'
+        const menu = new MenuManager('cont_overlay','/menu')
+    </script>
 </header>

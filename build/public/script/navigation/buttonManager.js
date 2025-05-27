@@ -1,0 +1,15 @@
+export const roleButtons = {
+    guest: (overlay) => ({
+        btn_close: () => {
+            overlay.innerHTML = "";
+            overlay.style.display = 'none';
+        },
+        btn_home: () => {
+            window.location.href = '/';
+        },
+        btn_connect: () => { },
+        btn_trip: () => {
+            window.location.href = '/covoiturage';
+        },
+    }),
+};

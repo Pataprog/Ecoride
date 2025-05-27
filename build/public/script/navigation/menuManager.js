@@ -1,12 +1,13 @@
-"use strict";
-class MenuManager {
+import { roleButtons } from "./buttonManager.js";
+export class MenuManager {
     overlay;
     menuURL;
     actionMap;
     constructor(overlayId, menuURL) {
         this.overlay = document.getElementById(overlayId);
         this.menuURL = menuURL;
-        this.actionMap = {};
+        this.actionMap = roleButtons.guest(this.overlay);
+        document.getElementById('btn_menu')?.addEventListener('click', () => this.loadAndShowMenu());
     }
     loadAndShowMenu() {
         fetch(this.menuURL)
