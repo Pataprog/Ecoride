@@ -1,0 +1,35 @@
+<form id = cont_adresse>
+<section>
+    <input type="text" name="adress-depart" class="field_adressInput" autocomplete="address-line1" id="field_depart" aria-label="adresse de départ"data-list-id="adressListDep" placeholder="Adresse de départ">
+        <div class="cont_address" id="cont_adressDep">
+            <ul class="adressList" id="adressListDep"></ul>
+        </div>
+    <input type="text" name="adress-arrival" class="field_adressInput" autocomplete="address-line1" id="field_arrival" aria-label="adresse de destination" data-list-id="adressListDest" placeholder="Adresse d'arrivé">
+        <div class="cont_address" id="cont_adressDest">
+            <ul class="adressList" id="adressListDest"></ul>
+        </div>
+</section>
+<section>
+    <div >
+        <span>planifier selon :</span>
+        <div class="toggle_buttons">
+            <input type="radio" name="direction" id="depart" hidden>
+            <label class="fakeToggle" for="depart" >le départ</label>
+            <input type="radio" name="direction" id="arrival" hidden>
+            <label class="fakeToggle" for="arrival">l'arrivé</label>
+        </div>
+        <div id="cont_timing">
+            <div class="style_timing">
+                <label for="field_date">quel jour ?</label>
+                <input type="date" name="field_date" id="field_date">
+            </div>
+            <div class="style_timing">
+                <label for="field_time">quelle heure ?</label>
+                <input type="time" name="field_time" id="field_time">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+          

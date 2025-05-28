@@ -16,7 +16,7 @@ export const roleButtons  = {
         btn_home: ()=> {
              window.location.href = '/';
         },
-        btn_connect: ()=> {},
+        btn_user: ()=> {},
         btn_trip: ()=> {
              window.location.href = '/covoiturage';
         },

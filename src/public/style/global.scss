@@ -1,11 +1,15 @@
-@use "../libs/index.scss" as *;
+@use "index.scss" as *;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
   display: flex;
   flex-direction: column;
     width: 100%;
-    margin: 0;
     border: 0;
   background-color: var(--main-bg);
   color:var(--text-primary);
@@ -21,4 +25,13 @@ p{font-size: 1.0rem;}
 ul{
   list-style: none;
   padding-left: 0;
+}
+
+li{
+margin: 0.5rem;
+}
+
+input::placeholder{
+  color: var(--text-primary);
+  font-style: italic;
 }

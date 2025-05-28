@@ -6,10 +6,10 @@
         <%-include('partials/header')%>
         <main class="main">
             <div class="container">
-                <h3>
+                <h3 class="intro" id="tricolon">
                     <span>Éco</span>voyagez, <span>Éco</span>-voiturez, <span>Éco</span>ridez
                 </h3>
-                <p> EcoRide est une plateforme de covoiturage conçue pour des trajets
+                <p class="intro"> EcoRide est une plateforme de covoiturage conçue pour des trajets
                     plus économiques et respectueux de l’environnement. <br>
                     Trouvez un conducteur ou des passagers en quelques clics, optimisez
                     vos trajets et réduisez votre empreinte carbone. <br>
@@ -17,16 +17,16 @@
                 </p>
                 <form action="" method="get">
                     <div class="formAdress">
-                        <input id=field_dest type="text" placeholder="Où allons nous ? "aria-label="adresse de destination"> 
-                        <button type= "button" >➤</button>
+                        <input class="field_adressInput" id=field_dest type="text" placeholder="Où allons nous ?" data-list-id="adressListDest" aria-label="adresse de destination"> 
+                        <button id="btn_validation" type= "button" aria-label="bouton de validation">➤</button>
                     </div>
-                    <div id="cont_address">
-                        <ul id="adressList"></ul>
+                    <div class="cont_address" id="cont_adressDest">
+                        <ul class="adressList" id="adressListDest"></ul>
                     </div>
                 </form>
             </div>
             <figure>     
-              <img class="illu_homepage" src="/images/illu_homepage.svg" alt="">  
+              <img class="illu_homepage" src="/images/illu_homepage.svg" alt="illustration homepage">  
             </figure>
         </main>
         <%-include('partials/footer')%>

@@ -5,11 +5,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --main-bg: #001800;
-    --sub-bg: #001400;
+    --sub-bg: #000a00;
     --text-primary: rgb(173, 252, 148);
     --text-secondary: rgb(49, 223, 107);
-    --primary-color: #4cfd78;
-    --secondary-color: #8B8C3A;
+    --primary-color: rgb(173, 252, 148);
+    --secondary-color: #000a00;
     --border-color: rgb(173, 252, 148);
   }
 }
@@ -19,8 +19,8 @@
     --sub-bg: rgba(248, 255, 246, 0.904);
     --text-primary: #0e4d0e;
     --text-secondary: rgb(49, 223, 107);
-    --primary-color: #4cfd78;
-    --secondary-color: #8B8C3A;
+    --primary-color: rgb(173, 252, 148);
+    --secondary-color: rgba(248, 255, 246, 0.904);
     --border-color: #001800;
   }
 }
@@ -31,7 +31,7 @@ body {
   line-height: 1.2;
 }
 
-.homepage main form button, header button {
+button {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: transparent;
@@ -48,18 +48,46 @@ body {
   width: fit-content;
 }
 
-.homepage main form input {
-  background-color: white;
+input {
+  background-color: var(--secondary-color);
   border-radius: 0.5rem;
   padding: 0.5rem;
   border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.cont_address {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(183, 228, 182, 0.425);
+  border-radius: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10%;
+}
+form input {
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0;
   border: 0;
   background-color: var(--main-bg);
   color: var(--text-primary);
@@ -78,13 +106,100 @@ ul {
   padding-left: 0;
 }
 
+li {
+  margin: 0.5rem;
+}
+
+input::placeholder {
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.homepage {
+  height: 100dvh;
+  position: relative;
+}
+.homepage main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 83dvh;
+}
+.homepage main .container {
+  flex-grow: 1;
+  width: 100%;
+}
+.homepage main #tricolon {
+  text-align: center;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.homepage main span {
+  color: var(--text-secondary);
+}
+.homepage main p {
+  text-align: center;
+  width: 90vw;
+  margin: auto;
+}
+.homepage main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10%;
+}
+.homepage main form .formAdress {
+  display: flex;
+  justify-content: center;
+}
+.homepage main form input {
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+.homepage main form #btn_validation {
+  display: inline-block;
+  font-size: 2rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.homepage figure {
+  height: 20%;
+  width: 80%;
+  margin: 0 0 0 auto;
+  overflow: hidden;
+}
+.homepage .illu_homepage {
+  height: 100%;
+  transform: translate(20%);
+}
+
+-----page legal----- .legal {
+  margin-left: 1rem;
+}
+
+-----page covoiturage----- .trip form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
 header {
   display: flex;
-  height: 12dvh;
-  width: 100%;
-  background-color: var(--sub-bg);
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 12dvh;
+  background-color: var(--sub-bg);
   border-bottom: 1px solid var(--text-primary);
 }
 header .logo {
@@ -92,7 +207,7 @@ header .logo {
   height: 10dvh;
   aspect-ratio: 1/1;
 }
-header h1 {
+header #title {
   flex-grow: 1;
 }
 header #btn_menu {
@@ -163,78 +278,5 @@ footer .btn_help {
   font-weight: 600;
   font-size: 1.5rem;
   color: var(--text-primary);
-}
-
-.homepage {
-  height: 100dvh;
-  overflow: hidden;
-  position: relative;
-}
-.homepage main {
-  display: flex;
-  flex-direction: column;
-  max-height: 83dvh;
-}
-.homepage main h3 {
-  text-align: center;
-}
-.homepage main p {
-  text-align: center;
-  width: 80vw;
-  margin: auto;
-}
-.homepage main form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10%;
-}
-.homepage main form .formAdress {
-  display: flex;
-  justify-content: center;
-}
-.homepage main form input {
-  height: 1.5rem;
-  margin-right: 0.5rem;
-}
-.homepage main form #cont_address {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  width: fit-content;
-  height: fit-content;
-  background-color: rgba(183, 228, 182, 0.425);
-  border-radius: 2rem;
-}
-.homepage main form li {
-  margin: 0.5rem;
-}
-.homepage main button {
-  display: inline-block;
-  font-size: 2rem;
-  height: 2.75rem;
-  text-align: center;
-  line-height: 1.375rem;
-  padding: 0;
-}
-.homepage .container {
-  flex-grow: 1;
-  width: 100%;
-}
-.homepage figure {
-  height: 20%;
-  width: 80%;
-  margin: 0 0 0 auto;
-  overflow: hidden;
-}
-.homepage .illu_homepage {
-  height: 100%;
-  transform: translate(20%);
-}
-.homepage span {
-  color: var(--text-secondary);
-}
-
-.legal {
-  margin-left: 1rem;
+  line-height: 0.4rem;
 }

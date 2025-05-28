@@ -1,0 +1,70 @@
+@use 'charte' as *;
+
+
+
+@mixin flex-center-container($direction:column, $justify:center, $align: center, $width: 100%){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    width: $width;
+}
+
+
+
+
+
+%button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-weight: 600;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+  button{
+    @extend %button;
+  }
+
+%button_circle{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border-color: var(--text-primary);
+    background-color: transparent;
+    width: fit-content;
+
+}
+
+%input{
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border-color: var(--border-color);
+    color: var(--text-primary)
+
+}
+
+input{
+    @extend %input;
+}
+
+.cont_address{
+margin-top: 0.5rem;
+padding-top: 0.5rem;
+width: fit-content;
+height: fit-content;
+background-color: rgba(183, 228, 182, 0.425);
+border-radius: 2rem;
+}
+
+form{
+            @include flex-center-container();
+        margin-top: 10%;
+
+
+
+            input{
+            height: 3rem;
+            margin-right: 0.5rem;
+            }
+        }

@@ -22,7 +22,10 @@ router.get('/menu',(req,res) =>{
   });
 
   router.get('/covoiturage',(req,res) =>{
-  res.render('searchTrip');
+  res.render('searchTrip',{
+    title: "Gestionnaire de trajet | ÉcoRide",
+    description: "Page de recherche de trajet"
+  });
 
   });
 
