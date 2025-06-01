@@ -20,7 +20,7 @@
                         <input class="field_adressInput" id=field_dest type="text" placeholder="Où allons nous ?" data-list-id="adressListDest" aria-label="adresse de destination"> 
                         <button id="btn_validation" type= "button" aria-label="bouton de validation">➤</button>
                     </div>
-                    <div class="cont_address" id="cont_adressDest">
+                    <div class="cont_address" data-cont-id="adressListDest">
                         <ul class="adressList" id="adressListDest"></ul>
                     </div>
                 </form>
@@ -31,5 +31,6 @@
         </main>
         <%-include('partials/footer')%>
         <script src="/script/utils/adresse_autocomplete.js"></script>
+       
     </body>
 </html>

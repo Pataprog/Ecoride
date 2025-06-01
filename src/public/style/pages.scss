@@ -68,109 +68,111 @@
     }    
 }
 
------page legal-----
+//-----page legal-----
 
 .legal{
   margin-left: 1rem;
 }
 
------page covoiturage-----
+//-----page covoiturage-----
 
 .trip{
+
+
 
 
     form{
          @include flex-center-container();
         margin-top: 2rem ;
         gap: 0.5rem;
+
     }
 
-    // section{
-    //     display: flex;
-    //     flex-direction: column;
-    //     width: 100%;
-    //     align-items: center;
-    //     gap: 1rem;
+    section{
+        @include flex-center-container();
+        gap: 1rem;
         
-    // }
-    // #cont_timing{
-    //     display: flex;
-    //     width: 100%;
-    //     flex: 1 1 100%;
-    //     gap:2rem;
-    //     padding: 0 1rem;
+    }
+    #cont_timing{
+        @include flex-center-container($direction:row);
+        flex: 1 1 100%;
+       
+        padding: 0 1rem;
 
-    //     input{
-    //        flex: 1;
-    //     }
-    // }
-    // div{
-    //     width: 100%;
-    // }
-
-    // input:not([type="radio"]){
-    //     @extend %input;
-    //   flex: 1 1 auto;
-    //   min-width: 0;
-    //   width: 80%;
-    // }
-
-    // .style_timing{
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    // }
-
-    // .fakeToggle{
-    //     border: 1px solid var(--border-color);
-    //     padding: 0.3rem;
-    //     width: 5rem;
-    //     height: 2rem;
-
-
-    //     transition: 
-
-    //      box-shadow 0.1s,
-    //       transform 0.1s;
-
-
-    // }
-    // label[for="depart"]{
-    //     border-radius: 0.3rem 0 0 0.3rem;
-
-    // }
-    // label[for="arrival"]{
-    //     border-radius: 0 0.3rem 0.3rem 0;
         
-    // }
 
-    // input[type="radio"]#depart:checked + label[for="depart"],
-    //   input[type="radio"]#arrival:checked + label[for="arrival"]
-    //  {
-    //     text-decoration: underline;
-    //     border: 2px solid var(--border-color);
-    //     // font-weight: bold;
-    //      transform: translateY(2px);
-    //     // box-shadow: inset 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
-    
-    // }
+        input{
+           flex: 1;
+           height: 20px;
+        }
+    }
+    div{
+        width: 100%;
+    }
 
-    // .toggle_buttons{
+    input:not([type="radio"]){
+        @extend %input;
+      flex: 1 1 auto;
+      min-width: 0;
+      width: 80%;
+    }
 
-    //     display: flex;
-    //     justify-content: center;
-    //     margin-bottom: 3vh;
+    .style_timing{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-    // }
+    .fakeToggle{
+        border: 1px solid var(--border-color);
+        padding: 0.3rem;
+        width: 5rem;
+        height: 2rem;
+        text-align: center;
 
-    // input[type="time"], input[type="date"]{
-    //     margin-top: 0.25rem;
-    //     color: var(--texte-primary);
-    // }
+        transition: 
+         box-shadow 0.1s,
+          transform 0.1s;
 
-    // span{
-    //     margin: 0.5rem 0;
-    //     display: block;
-    //     text-align: center;
-    // }
- }
+
+    }
+    label[for="depart"]{
+        border-radius: 0.3rem 0 0 0.3rem;
+
+    }
+    label[for="arrival"]{
+        border-radius: 0 0.3rem 0.3rem 0;
+        
+    }
+
+    input[type="radio"]#depart:checked + label[for="depart"],
+      input[type="radio"]#arrival:checked + label[for="arrival"]
+     {
+        text-decoration: underline;
+        border: 2px solid var(--border-color);
+         transform: translateY(2px);
+
+    }
+
+    .toggle_buttons{
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3vh;
+
+    }
+
+    input[type="time"], input[type="date"]{
+        margin-top: 0.25rem;
+        color: var(--texte-primary);
+    }
+
+    span{
+        margin: 0.5rem 0;
+        display: block;
+        text-align: center;
+    }
+
+}
+
+

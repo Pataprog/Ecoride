@@ -3,9 +3,11 @@ console.log("je suis chargé à bloc !");
 class AdressAutocomplete {
     input;
     list;
-    constructor(input, list) {
+    container;
+    constructor(input, list, container) {
         this.input = input;
         this.list = list;
+        this.container = container;
         this.setupListeners();
         this.attachListerners();
     }
@@ -14,6 +16,7 @@ class AdressAutocomplete {
         this.input.addEventListener('blur', () => this.handleBlur());
     }
     handleFocus() {
+        this.input.scrollIntoView({ behavior: 'smooth', block: 'start' });
         Array.from(document.getElementsByClassName('intro')).forEach(e => {
             e.style.display = "none";
         });
@@ -34,10 +37,14 @@ class AdressAutocomplete {
         }, 150);
     }
     showList() {
+        console.log("check point A");
         this.list.style.display = 'block';
+        console.log("check point B");
+        this.container.classList.remove('hidden');
     }
     hideList() {
         this.list.style.display = 'none';
+        this.container.classList.add('hidden');
     }
     setupListeners() {
         this.input.addEventListener('input', (e) => {
@@ -67,16 +74,17 @@ class AdressAutocomplete {
     }
 }
 document.querySelectorAll('.field_adressInput').forEach(input => {
-    input.addEventListener('focus', () => {
-        // Cacher intro et header
-        const listId = input.dataset.listId;
-        if (!listId)
-            return;
-        console.log("J'entends fort et clair ! Au point A");
-        const list = document.getElementById(listId);
-        if (!list)
-            return;
-        console.log("J'entends fort et clair ! Au point B");
-        new AdressAutocomplete(input, list);
-    });
+    // Cacher intro et header
+    const listId = input.dataset.listId;
+    if (!listId)
+        return;
+    const list = document.getElementById(listId);
+    if (!list)
+        return;
+    const container = document.querySelector(`[data-cont-id="${input.dataset.listId}"]`);
+    if (!container) {
+        console.warn(`Container introuvable pour ${listId}`);
+        return;
+    }
+    new AdressAutocomplete(input, list, container);
 });

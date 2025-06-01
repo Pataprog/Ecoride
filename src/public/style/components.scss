@@ -55,16 +55,35 @@ width: fit-content;
 height: fit-content;
 background-color: rgba(183, 228, 182, 0.425);
 border-radius: 2rem;
+// display: none;
+
+    &:empty{
+        display: none;
+    }
+
 }
 
+
+
 form{
-            @include flex-center-container();
+        @include flex-center-container();
+
         margin-top: 10%;
-
-
 
             input{
             height: 3rem;
             margin-right: 0.5rem;
             }
         }
+
+.hidden {
+    display: none !important;
+}
+
+.buttons_inline{
+     @include flex-center-container($direction:row);
+   
+     margin-top:2rem;
+     gap: 2rem;
+
+}

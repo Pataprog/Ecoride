@@ -1,11 +1,11 @@
-<form id = cont_adresse>
+<form id = cont_adresse class="trip">
 <section>
     <input type="text" name="adress-depart" class="field_adressInput" autocomplete="address-line1" id="field_depart" aria-label="adresse de départ"data-list-id="adressListDep" placeholder="Adresse de départ">
-        <div class="cont_address" id="cont_adressDep">
+        <div class="cont_address hidden" data-cont-id="adressListDep" >
             <ul class="adressList" id="adressListDep"></ul>
         </div>
     <input type="text" name="adress-arrival" class="field_adressInput" autocomplete="address-line1" id="field_arrival" aria-label="adresse de destination" data-list-id="adressListDest" placeholder="Adresse d'arrivé">
-        <div class="cont_address" id="cont_adressDest">
+        <div class="cont_address hidden" data-cont-id="adressListDest">
             <ul class="adressList" id="adressListDest"></ul>
         </div>
 </section>
@@ -14,22 +14,31 @@
         <span>planifier selon :</span>
         <div class="toggle_buttons">
             <input type="radio" name="direction" id="depart" hidden>
-            <label class="fakeToggle" for="depart" >le départ</label>
+            <label class="fakeToggle" for="depart" >Partir à</label>
             <input type="radio" name="direction" id="arrival" hidden>
-            <label class="fakeToggle" for="arrival">l'arrivé</label>
+            <label class="fakeToggle" for="arrival">Arriver à</label>
         </div>
         <div id="cont_timing">
             <div class="style_timing">
-                <label for="field_date">quel jour ?</label>
+                <label for="field_date">Quel jour ?</label>
                 <input type="date" name="field_date" id="field_date">
             </div>
             <div class="style_timing">
-                <label for="field_time">quelle heure ?</label>
+                <label for="field_time">Quelle heure ?</label>
                 <input type="time" name="field_time" id="field_time">
             </div>
         </div>
     </div>
 </section>
-</div>
+    <div class="buttons_inline">
+        <button type="button">FILTRE</button>
+        <button type="button">VALIDER</button>
+    </div>
+</form>
+
+<!-- affichage des cards-->
+<section>
+
+</section>
 
           

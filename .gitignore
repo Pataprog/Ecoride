@@ -3,3 +3,4 @@ node_modules/
 dist/css/main.css.map
 public/css/main.css.map
 watch-test.ts
+devtool/Notes.txt

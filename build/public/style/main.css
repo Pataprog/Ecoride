@@ -48,7 +48,7 @@ button {
   width: fit-content;
 }
 
-input {
+.trip input:not([type=radio]), input {
   background-color: var(--secondary-color);
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -64,6 +64,9 @@ input {
   background-color: rgba(183, 228, 182, 0.425);
   border-radius: 2rem;
 }
+.cont_address:empty {
+  display: none;
+}
 
 form {
   display: flex;
@@ -76,6 +79,20 @@ form {
 form input {
   height: 3rem;
   margin-right: 0.5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.buttons_inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 2rem;
 }
 
 * {
@@ -178,11 +195,11 @@ input::placeholder {
   transform: translate(20%);
 }
 
------page legal----- .legal {
+.legal {
   margin-left: 1rem;
 }
 
------page covoiturage----- .trip form {
+.trip form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,6 +207,74 @@ input::placeholder {
   width: 100%;
   margin-top: 2rem;
   gap: 0.5rem;
+}
+.trip section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.trip #cont_timing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 100%;
+  padding: 0 1rem;
+}
+.trip #cont_timing input {
+  flex: 1;
+  height: 20px;
+}
+.trip div {
+  width: 100%;
+}
+.trip input:not([type=radio]) {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 80%;
+}
+.trip .style_timing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trip .fakeToggle {
+  border: 1px solid var(--border-color);
+  padding: 0.3rem;
+  width: 5rem;
+  height: 2rem;
+  text-align: center;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+.trip label[for=depart] {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+.trip label[for=arrival] {
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+.trip input[type=radio]#depart:checked + label[for=depart],
+.trip input[type=radio]#arrival:checked + label[for=arrival] {
+  text-decoration: underline;
+  border: 2px solid var(--border-color);
+  transform: translateY(2px);
+}
+.trip .toggle_buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+.trip input[type=time], .trip input[type=date] {
+  margin-top: 0.25rem;
+  color: var(--texte-primary);
+}
+.trip span {
+  margin: 0.5rem 0;
+  display: block;
+  text-align: center;
 }
 
 header {
